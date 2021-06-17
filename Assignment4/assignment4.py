@@ -27,17 +27,34 @@ ax = fig.add_subplot(111,projection='3d')
 #defining planes:  n.T * x = c 
 n1 = np.array([2,2,-3]).reshape((3,1))
 n2 = np.array([2,5,3]).reshape((3,1))
+n3 = np.array([38,68,3]).reshape((3,1))
 A =  np.array([2,1,3]).reshape((3,1))
 c1 = 7
 c2 = 9
+c3 = 153
+
+k1=-4
+k2=4
+
 #corresponding z for planes
 z1 = (c1-n1[0]*xx-n1[1]*yy)/(n1[2])
 z2 = (c2-n2[0]*xx-n2[1]*yy)/(n2[2])
+z3 = (c3-n3[0]*xx-n3[1]*yy)/(n3[2])
+
 
 #plotting planes
-Plane=ax.plot_surface(xx, yy, z1,label="Plane", color='b',alpha=0.5)
-Plane._facecolors2d=Plane._facecolors3d
-Plane._edgecolors2d=Plane._edgecolors3d
+Plane1=ax.plot_surface(xx, yy, z1,label="Plane1", color='red',alpha=0.5)
+Plane1._facecolors2d=Plane1._facecolors3d
+Plane1._edgecolors2d=Plane1._edgecolors3d
+Plane2=ax.plot_surface(xx, yy, z2,label="Plane2", color='blue',alpha=0.5)
+Plane2._facecolors2d=Plane2._facecolors3d
+Plane2._edgecolors2d=Plane2._edgecolors3d
+Plane3=ax.plot_surface(xx, yy, z3,label="Plane3", color='y',alpha=0.5)
+Plane3._facecolors2d=Plane3._facecolors3d
+Plane3._edgecolors2d=Plane3._edgecolors3d
+#ax.view_init(160, 60)
+
+
 #plotting point
 ax.scatter(A[0],A[1],A[2],'o')
 ax.text(1.2,0.2,-2.2,'A') 
