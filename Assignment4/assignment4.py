@@ -43,13 +43,13 @@ z3 = (c3-n3[0]*xx-n3[1]*yy)/(n3[2])
 
 
 #plotting planes
-Plane1=ax.plot_surface(xx, yy, z1,label="Plane1", color='red',alpha=0.5)
+Plane1=ax.plot_surface(xx, yy, z1,label='(2 2 -3)x=7', color='red',alpha=0.5)
 Plane1._facecolors2d=Plane1._facecolors3d
 Plane1._edgecolors2d=Plane1._edgecolors3d
-Plane2=ax.plot_surface(xx, yy, z2,label="Plane2", color='blue',alpha=0.5)
+Plane2=ax.plot_surface(xx, yy, z2,label='(2 5 3)x=9', color='blue',alpha=0.5)
 Plane2._facecolors2d=Plane2._facecolors3d
 Plane2._edgecolors2d=Plane2._edgecolors3d
-Plane3=ax.plot_surface(xx, yy, z3,label="Plane3", color='y',alpha=0.5)
+Plane3=ax.plot_surface(xx, yy, z3,label='(38 68 3)x=153', color='y',alpha=0.5)
 Plane3._facecolors2d=Plane3._facecolors3d
 Plane3._edgecolors2d=Plane3._edgecolors3d
 #ax.view_init(160, 60)
@@ -62,3 +62,4 @@ ax.text(1.2,0.2,-2.2,'A')
 #show plot
 plt.xlabel('$x$');plt.ylabel('$y$')
 plt.legend(loc='best');plt.grid()
+
